@@ -1,0 +1,144 @@
+h1 {
+    font-family:cursive
+}
+
+body {
+    margin: 0; /* to get rid of default margin */
+    padding: 0;
+    background-image: url(/images/whitebg2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; /*covers the whole page*/
+    background-attachment: fixed; /*prevents image scrolling*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content:space-between; /* to push title to left and ul to right */
+    padding: 10px 0; /* top and bottom, left and right */
+    background-color:darkgray
+}
+
+header h1 {
+    color:black;
+    margin-top: 20px;
+    margin-left: 7em;
+}
+
+header nav ul {
+    list-style: none; /* no bullet list */
+    display: flex;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+header nav ul li a:focus { /* to assist accessibility f.e through tabs*/
+    text-decoration: underline;
+    background-color:lightgray
+}
+
+header nav ul li a:hover { /* when hovering with mouse pointer */
+    text-decoration: underline;
+    background-color:lightgray
+}
+
+h2 {
+    text-align: center;
+}
+
+h2 + p {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+footer {
+    text-align: center;
+    background-color: darkgray;
+    padding: 10px;
+    margin-top: auto; /* pushes footer to bottom */
+}
+
+.tutorial-image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal width columns, one forth of available width */
+    grid-gap: 20px; /* adjust gap between images */
+    text-align: center;
+    margin: 20px auto;
+    max-width: 70%; /* max width of grid container so image and text arent too wide on larger screens*/
+}
+
+.tutorial-image {
+    max-width: 20%;
+    height: auto; /* no distort when resizing */
+    border: 2px;
+    padding: 10px;
+    background-color:rgb(192, 191, 191)
+}
+
+.supply-image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal width columns, one forth of available width */
+    grid-gap: 20px; /* adjust gap between images */
+    text-align: center;
+    margin: 20px auto;
+    max-width: 70%; /* max width of grid container so image and text arent too wide on larger screens*/
+}
+
+.supply-image {
+    max-width: 20%;
+    height: auto; /* no distort when resizing */
+    border: 2px;
+    padding: 10px;
+    background-color:rgb(192, 191, 191)
+}
+
+.supply-image-text {
+    margin-top: 10px;
+    font-weight: bold
+}
+
+.contactinfo {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section article:nth-child(odd) { /*alle oneven images this style*/
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color:gainsboro
+}
+
+section article:nth-child(odd) > p {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+section article:nth-child(even) { /*alle even images this style*/
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color:lightgray
+}
+
+section article:nth-child(even) > p {
+    margin-right: 2%;
+    margin-left: 2%;
+}
