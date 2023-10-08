@@ -43,6 +43,8 @@ header nav ul li a {
     text-decoration: none;
     color: black;
     padding: 10px;
+    transition: ease-in-out 0.5s;
+    border-radius: 0.4em;
 }
 
 header nav ul li a:focus { /* to assist accessibility f.e through tabs*/
@@ -57,11 +59,14 @@ header nav ul li a:hover { /* when hovering with mouse pointer */
 
 h2 {
     text-align: center;
+    margin-top: 3em;
 }
 
 h2 + p {
     text-align: center;
     margin-bottom: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 footer {
@@ -71,23 +76,33 @@ footer {
     margin-top: auto; /* pushes footer to bottom */
 }
 
-.tutorial-image-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal width columns, one forth of available width */
-    grid-gap: 20px; /* adjust gap between images */
-    text-align: center;
-    margin: 20px auto;
-    max-width: 70%; /* max width of grid container so image and text arent too wide on larger screens*/
+.home-images img {
+    width: 20em; 
+    margin: 2%;
+    transition: ease-in-out 0.5s;
 }
 
-.tutorial-image {
-    max-width: 20%;
-    height: auto; /* no distort when resizing */
-    border: 2px;
-    padding: 10px;
-    background-color:rgb(192, 191, 191)
+.home-images:hover img {
+    transform: scale(1.1); /* appears 10% larger than original size*/
 }
 
+.home-images {
+    list-style-type: none;
+}
+
+.home-image {
+    display: flex;
+    justify-content: center;
+}
+
+.home-image-container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tutorial-image-container,
 .supply-image-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 equal width columns, one forth of available width */
@@ -97,6 +112,7 @@ footer {
     max-width: 70%; /* max width of grid container so image and text arent too wide on larger screens*/
 }
 
+.tutorial-image,
 .supply-image {
     max-width: 20%;
     height: auto; /* no distort when resizing */
@@ -117,18 +133,21 @@ footer {
 section {
     display: flex;
     flex-direction: column;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-bottom: 3em;
 }
 
 section article:nth-child(odd) { /*alle oneven images this style*/
     display: flex;
-    align-items: center;
+    align-items: center;;
     flex-direction: row;
     background-color:gainsboro
 }
 
 section article:nth-child(odd) > p {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 section article:nth-child(even) { /*alle even images this style*/
@@ -139,6 +158,27 @@ section article:nth-child(even) { /*alle even images this style*/
 }
 
 section article:nth-child(even) > p {
-    margin-right: 2%;
-    margin-left: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.springinspo, .summerinspo, .autumninspo, .winterinspo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+h3 {
+    text-align: center;
+    display: block;
+}
+
+.springinspo img , .summerinspo img, .autumninspo img, .winterinspo img {
+    max-width: 20%;
+    height: auto;
+}
+
+.bold-text {
+    font-weight: bold;
 }
