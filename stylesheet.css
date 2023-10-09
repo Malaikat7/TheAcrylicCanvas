@@ -1,25 +1,24 @@
 img {
-    max-width: 100%;
+    max-width: 100%; /* responsive design */
 }
 
-* { box-sizing: border-box ; }
+* { box-sizing: border-box ; } /* elements total width and height*/
 
 h1 {
-    font-family:cursive
+    font-family:cursive;
 }
 
 body {
     font-family:'Times New Roman', Times, serif;
     font-size:large;
-    margin: 0; /* to get rid of default margin */
-    padding: 0;
+    margin: 0; /* gets rid of default margin */
+    padding: 0; /* gets rid of default margin */
     background-color: rgb(207, 197, 204);
-    background-repeat: no-repeat;
-    background-size: cover; /*covers the whole page*/
-    background-attachment: fixed; /*prevents image scrolling*/
+    background-size: cover; /* covers the entire page */
+    background-attachment: fixed; /* prevents image scrolling */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* flexcontainer takes up 100% viewport height*/
 }
 
 header {
@@ -48,7 +47,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    text-decoration: none;
+    text-decoration: none; /* removes underline from link */
     color: black;
     padding: 0.5em;
     transition: ease-in-out 0.5s;
@@ -70,7 +69,7 @@ h2 {
     margin-top: 3em;
 }
 
-h2 + p {
+h2 + p { /* text under h2 */
     text-align: center;
     margin-bottom: 5em;
     margin-left: 5em;
@@ -84,6 +83,11 @@ footer {
     margin-top: auto; /* pushes footer to bottom */
 }
 
+.home-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+}
 .home-images img {
     width: 20em; 
     margin-right: 2em;
@@ -95,45 +99,31 @@ footer {
 }
 
 .home-images {
-    list-style-type: none;
-    margin: 0.5em;
-}
-
-.home-image {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3em;
+    list-style-type: none; /* no bullets */
 }
 
 .home-image-container { 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 100%;
-}
-
-.tutorial-image-container,
-.supply-image-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal width columns, one forth of available width */
-    grid-gap: 1.25em; /* adjust gap between images */
-    text-align: center;
-    margin: 1.25em auto;
-    max-width: 70%; /* max width of grid container so image and text arent too wide on larger screens*/
 }
 
 .tutorial-image,
 .supply-image {
     max-width: 20%;
-    height: auto; /* no distort when resizing */
+    height: auto; /* images wont distort when resizing */
     border: 2px;
     border-style:inset;
     padding: 0.3em;
     background-color:rgb(42, 42, 42)
 }
 
-.contactinfo {
+.tutorial-image-container,
+.supply-image-container {
+    display: grid;
     text-align: center;
+    margin: 1.25em auto; /* automatically center horizontally*/
+    max-width: 70%; /* max width of grid container so image and text arent too wide on larger screens */
 }
 
 section {
@@ -144,23 +134,23 @@ section {
     margin-bottom: 3em;
 }
 
-section article:nth-child(odd) { /*alle oneven images this style*/
+section article:nth-child(odd) { /* alle oneven images this style */
     display: flex;
     align-items: center;;
     flex-direction: row;
     background-color:rgb(243, 236, 240);
 }
 
-section article:nth-child(odd) > p {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-section article:nth-child(even) { /*alle even images this style*/
+section article:nth-child(even) { /* alle even images this style */
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     background-color:rgb(232, 220, 226);
+}
+
+section article:nth-child(odd) > p { /* margin for text */
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 section article:nth-child(even) > p {
@@ -177,15 +167,22 @@ section article:nth-child(even) > p {
 
 h3 {
     text-align: center;
-    display: block;
     padding: 0.5em;
 }
 
 .springinspo img , .summerinspo img, .autumninspo img, .winterinspo img {
     max-width: 20%;
-    height: auto;
+    height: auto; /* no distort when resizing */
 }
 
 .bold-text {
     font-weight: bold;
+}
+
+.contactinfo {
+    text-align: center;
+}
+
+.fakeinstagram {
+    color: blue;
 }
