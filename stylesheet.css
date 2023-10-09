@@ -9,9 +9,11 @@ h1 {
 }
 
 body {
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
     margin: 0; /* to get rid of default margin */
     padding: 0;
-    background-image: url(/images/whitebg2.jpeg);
+    background-color: rgb(207, 197, 204);
     background-repeat: no-repeat;
     background-size: cover; /*covers the whole page*/
     background-attachment: fixed; /*prevents image scrolling*/
@@ -24,12 +26,12 @@ header {
     display: flex;
     justify-content:space-between; /* to push title to left and ul to right */
     padding: 1em 0; /* top and bottom, left and right */
-    background-color:darkgray
+    background-color: rgb(243, 236, 240);
 }
 
 header h1 {
     color:black;
-    margin-top: 0.9em;
+    margin-top: 0.65em;
     margin-left: 3em;
 }
 
@@ -51,17 +53,16 @@ header nav ul li a {
     padding: 0.5em;
     transition: ease-in-out 0.5s;
     border-radius: 0.4em;
-    display: block; 
 }
 
 header nav ul li a:focus { /* to assist accessibility f.e through tabs*/
     text-decoration: underline;
-    background-color:lightgray
+    background-color:rgb(207, 197, 204);
 }
 
 header nav ul li a:hover { /* when hovering with mouse pointer */
     text-decoration: underline;
-    background-color:lightgray
+    background-color:rgb(207, 197, 204);
 }
 
 h2 {
@@ -78,14 +79,14 @@ h2 + p {
 
 footer {
     text-align: center;
-    background-color: darkgray;
+    background-color: rgb(243, 236, 240);
     padding: 0.5em;
     margin-top: auto; /* pushes footer to bottom */
 }
 
 .home-images img {
     width: 20em; 
-    margin: 2%;
+    margin-right: 2em;
     transition: ease-in-out 0.5s;
 }
 
@@ -102,8 +103,6 @@ footer {
     display: flex;
     justify-content: center;
     margin-bottom: 3em;
-    padding: 0.5em;
-    background-color:rgb(211, 211, 211)
 }
 
 .home-image-container { 
@@ -128,8 +127,9 @@ footer {
     max-width: 20%;
     height: auto; /* no distort when resizing */
     border: 2px;
-    padding: 0.5em;
-    background-color:rgb(162, 161, 161)
+    border-style:inset;
+    padding: 0.3em;
+    background-color:rgb(42, 42, 42)
 }
 
 .contactinfo {
@@ -148,7 +148,7 @@ section article:nth-child(odd) { /*alle oneven images this style*/
     display: flex;
     align-items: center;;
     flex-direction: row;
-    background-color:gainsboro
+    background-color:rgb(243, 236, 240);
 }
 
 section article:nth-child(odd) > p {
@@ -160,7 +160,7 @@ section article:nth-child(even) { /*alle even images this style*/
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    background-color:lightgray
+    background-color:rgb(232, 220, 226);
 }
 
 section article:nth-child(even) > p {
@@ -178,6 +178,7 @@ section article:nth-child(even) > p {
 h3 {
     text-align: center;
     display: block;
+    padding: 0.5em;
 }
 
 .springinspo img , .summerinspo img, .autumninspo img, .winterinspo img {
